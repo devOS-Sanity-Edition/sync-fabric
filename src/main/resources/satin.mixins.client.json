@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_16",
+  "package": "ladysnake.satin.mixin.client",
+  "plugin": "ladysnake.satin.mixin.SatinMixinPlugin",
+  "mixins": [
+    "AccessiblePassesShaderEffect",
+    "render.RenderLayerAccessor",
+    "render.RenderLayerMixin",
+    "render.RenderLayerMixin$MultiPhaseParametersAccessor",
+    "render.RenderLayerMultiPhaseMixin",
+    "render.RenderPhaseAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

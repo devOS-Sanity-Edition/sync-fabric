@@ -28,14 +28,17 @@
     ],
     "cardinal-components-entity": [
       "dev.kir.sync.compat.origins.OriginsCompat",
-      "dev.kir.sync.compat.haema.HaemaCompat",
       "dev.kir.sync.compat.trinkets.TrinketsCompat"
     ]
   },
   "mixins": [
     "sync.compat.mixins.json",
     "sync.easteregg.mixins.json",
-    "sync.mixins.json"
+    "sync.mixins.json",
+    {
+      "environment": "client",
+      "config": "satin.mixins.client.json"
+    }
   ],
   "accessWidener": "sync.accesswidener",
   "custom": {
@@ -52,7 +55,6 @@
   },
   "includes": {
     "smart-recipes": "${smart_recipes}",
-    "satin-api": "${satin_api}",
     "crowdin-translate": "${crowdin_translate}",
     "team_reborn_energy": "${team_reborn_energy}"
   },
@@ -61,7 +63,6 @@
     "modmenu": "${modmenu}",
     "trinkets": "${trinkets}",
     "origins": "${origins}",
-    "haema": "${haema}",
     "requiem": "${requiem}"
   }
 }

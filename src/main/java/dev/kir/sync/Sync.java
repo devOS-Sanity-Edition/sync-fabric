@@ -14,11 +14,15 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Sync implements ModInitializer, ClientModInitializer {
     public static final String MOD_ID = "sync";
     public static final String PROJECT_ID = MOD_ID + "-fabric";
     private static final SyncConfig CONFIG = SyncConfig.resolve();
+
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static Identifier locate(String location) {
         return new Identifier(MOD_ID, location);

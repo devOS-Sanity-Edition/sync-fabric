@@ -96,7 +96,7 @@ dependencies {
 
     modImplementation(include("de.guntram.mcmod:crowdin-translate:${project.crowdin_translate_version}"))
     modImplementation(include("teamreborn:energy:${project.tr_energy_version}"))
-    modImplementation(include("io.github.ladysnake:satin:${project.satin_version}"))
+    //modImplementation(include("io.github.ladysnake:satin:${project.satin_version}"))
     modImplementation(include("maven.modrinth:smart-recipes:${project.smartrecipes_version}"))
 
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}"
@@ -105,7 +105,9 @@ dependencies {
     modCompileOnly("io.github.ladysnake:requiem-api:${project.requiem_version}", { transitive false })
     modCompileOnly "maven.modrinth:origins:${project.origins_version}"
     modCompileOnly "com.github.apace100:apoli:${project.apoli_version}"
-    modCompileOnly "maven.modrinth:haema:${project.haema_version}"
+
+    modCompileOnly ("maven.modrinth:iris:${project.iris_version}")
+    //modCompileOnly "maven.modrinth:haema:${project.haema_version}"
 }
 
 processResources {
@@ -115,7 +117,7 @@ processResources {
             "fabric": ">=${loaderDependencyVersion}",
             "minecraft": ">=${minecraftDependencyVersion}",
             "smart_recipes": project.smartrecipes_version,
-            "satin_api": project.satin_version,
+            //"satin_api": project.satin_version,
             "crowdin_translate": project.crowdin_translate_version,
             "team_reborn_energy": project.tr_energy_version,
             "cloth_config": ">=${project.cloth_version}",
@@ -123,7 +125,7 @@ processResources {
             "trinkets": ">=${project.trinkets_version}",
             "requiem": ">=${project.requiem_version}",
             "origins": ">=${project.origins_version}",
-            "haema": ">=${project.haema_version}",
+            //"haema": ">=${project.haema_version}",
         ])
     }
 }
